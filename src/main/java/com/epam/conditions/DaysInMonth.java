@@ -1,16 +1,18 @@
 package com.epam.conditions;
-
+import java.util.Calendar;
 public class DaysInMonth {
 
     public void printDays(int year, int month) {
-        if (year < 0 || month < 0) {
+        if (year < 0 || month < 0 || month > 12) {
             System.out.println("invalid date");
         }
+        Calendar calendar = Calendar.getInstance();
+      
+        calendar.set(year, month, 1);
+        int maxDay = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
 
-        LocalDate localDate = LocalDate.of(year, month, 1);
-        System.out.println("Leap year");
+        System.out.println(maxDay);
 
-        System.out.println("localDate.getDayOfMonth() = " + localDate.getDayOfMonth());
     }
 
 }
