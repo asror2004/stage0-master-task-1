@@ -6,7 +6,7 @@ public class MultiplicationTable {
         if (numberTableToPrint <= 0){
             System.out.println("Please enter positive number");
         }else {
-            for (int i = 0 ; i <= 9 ; i++){
+            for (int i = 1 ; i <= 9 ; i++){
                 System.out.println(numberTableToPrint + " * " + i + " = "
                         +  (numberTableToPrint * i ) );
             }
