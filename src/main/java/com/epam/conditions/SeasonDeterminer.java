@@ -1,4 +1,4 @@
-upackage com.epam.conditions;
+package com.epam.conditions;
 
 public class SeasonDeterminer {
 
