@@ -12,14 +12,12 @@ public class Animal {
     }
 
     public void   getDescription() {
-        String str ;
         if (numberOfPaws == 1 ){
-            str = "paw" ;
+            System.out.println("This animal is mostly " + color + ". " +
+                    "It has " + numberOfPaws + " paw and " + hasFur+" fur.");
         }else{
-            str = "paws" ;
+            System.out.println("This animal is mostly " + color + ". " +
+                    "It has " + numberOfPaws + " paws and " + hasFur+" fur.");
         }
-
-        System.out.println("This animal is mostly " + color + ". " +
-                "It has " + numberOfPaws + " "+str+" and " + hasFur+" fur.");
     }
 }
