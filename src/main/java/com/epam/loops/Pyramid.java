@@ -3,7 +3,7 @@ package com.epam.loops;
 public class Pyramid {
 
     public void printPyramid(int cathetusLength) {
-      int k = c - 2;
+      int k = cathetusLength - 2;
 
         for (int i = 0; i < k; i++) {
 
