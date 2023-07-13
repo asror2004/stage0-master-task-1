@@ -116,24 +116,31 @@ public class ArrayTasks {
      */
     public int[][] sortRaggedArray(int[][] arr) {
        
-        for (int i = 0 ; i < arr.length - 1 ; i++){
-             if(arr[i].length  > arr[i+1].length){
-                 int[] int12 = arr[i];
-                 arr[i] = arr[i + 1];
-                 arr[i + 1] = int12;
-             }
-       }
-
-        for (int[] ints : arr) {
-            for (int j = 0; j < ints.length - 1; j++) {
-                if (ints[j] > ints[j + 1]) {
-                    ints[j] = ints[j] + ints[j + 1];
-                    ints[j + 1] = ints[j] - ints[j + 1];
-                    ints[j] = ints[j] - ints[j+1];
+       
+      public static int[][] sortRaggedArray(int[][] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j].length > arr[j + 1].length) {
+                    int[] temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
                 }
             }
         }
-       return arr;
+    
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length - 1; j++) {
+                for (int k = 0; k < arr[i].length - j - 1; k++) {
+                    if (arr[i][k] > arr[i][k + 1]) {
+                        int temp = arr[i][k];
+                        arr[i][k] = arr[i][k + 1];
+                        arr[i][k + 1] = temp;
+                    }
+                }
+            }
+        }
+
+        return arr;
     }
 
 }
