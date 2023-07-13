@@ -5,11 +5,10 @@ public class DaysInMonth {
     public void printDays(int year, int month) {
         if (year < 0 || month < 0 || month > 12) {
             System.out.println("invalid date");
-        }
+        }else{
         int number = 0;
         LocalDate localDate = LocalDate.of(year, month, 1);
         boolean leapYear = localDate.isLeapYear();
-
         switch (month){
             case 1 :
             case 3 :
@@ -29,5 +28,6 @@ public class DaysInMonth {
             case 2 : number = leapYear ? 29 : 28 ;
         }
                 System.out.println(number);
+    }
     }
 }
