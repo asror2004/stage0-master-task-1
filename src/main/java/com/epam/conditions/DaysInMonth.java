@@ -1,5 +1,5 @@
 package com.epam.conditions;
-import java.util.Calendar;
+import java.time.LocalDate;
 public class DaysInMonth {
 
     public void printDays(int year, int month) {
@@ -27,10 +27,7 @@ public class DaysInMonth {
                 number = 30;
                 break;
             case 2 : number = leapYear ? 29 : 28 ;
-
+        }
                 System.out.println(number);
-        }
-        }
     }
-
 }
